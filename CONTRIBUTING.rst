@@ -67,8 +67,8 @@ you already have `virtualenv`_ and `Git`_ installed and ready to go. If you are 
 
 3. Assuming you have virtualenv installed (If you have Python3.5 this should already be there), you can create a new environment for your local development by typing::
 
-    $ virtualenv cookiecutter-djangopackage--gitlab-env
-    $ source cookiecutter-djangopackage-gitlab--env/bin/activate
+    $ virtualenv cookiecutter-djangopackage-gitlab-env
+    $ source cookiecutter-djangopackage-gitlab-env/bin/activate
 
    This should change the shell to look something like::
 
@@ -80,7 +80,7 @@ you already have `virtualenv`_ and `Git`_ installed and ready to go. If you are 
 
    Now you can make your changes locally.
 
-5. The next step would be to run the test cases. `cookiecutter-djangopackage-gitlab-`_ uses py.test, you can run PyTest. Before you run pytest you should ensure all dependancies are installed::
+5. The next step would be to run the test cases. `cookiecutter-djangopackage-gitlab`_ uses py.test, you can run PyTest. Before you run pytest you should ensure all dependancies are installed::
 
     $ pip install -r requirements_dev.txt
     $ py.test
@@ -115,7 +115,7 @@ Before you submit a pull request, check that it meets these guidelines:
    your new functionality into a function with a docstring, and add the
    feature to the list in README.rst.
 3. The pull request should work for Python 2.7, 3.3, 3.4 and 3.5, and for PyPy. Check
-   https://travis-ci.org/scotta/cookiecutter-djangopackage-gitlab-/pull_requests
+   https://travis-ci.org/scotta/cookiecutter-djangopackage-gitlab/pull_requests
    and make sure that the tests pass for all supported Python versions.
 
 
