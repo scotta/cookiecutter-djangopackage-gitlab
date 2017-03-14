@@ -2,14 +2,11 @@
 {{ cookiecutter.project_name }}
 =============================
 
-.. image:: https://badge.fury.io/py/{{ cookiecutter.repo_name }}.svg
-    :target: https://badge.fury.io/py/{{ cookiecutter.repo_name }}
+.. image:: https://gitlab.com/hinterlandtoyota/{{ cookiecutter.repo_name }}/badges/master/build.svg
+    :target: https://gitlab.com/hinterlandtoyota/{{ cookiecutter.repo_name }}/commits/master
 
-.. image:: https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.svg?branch=master
-    :target: https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}
-
-.. image:: https://codecov.io/gh/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}
+.. image:: https://gitlab.com/hinterlandtoyota/{{ cookiecutter.repo_name }}/badges/master/coverage.svg
+    :target: https://gitlab.com/hinterlandtoyota/{{ cookiecutter.repo_name }}/commits/master
 
 {{ cookiecutter.project_short_description}}
 
