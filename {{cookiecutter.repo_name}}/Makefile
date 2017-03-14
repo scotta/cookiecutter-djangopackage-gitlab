@@ -27,6 +27,10 @@ clean-pyc: ## remove Python file artifacts
 	find . -name '*.pyo' -exec rm -f {} +
 	find . -name '*~' -exec rm -f {} +
 
+clean-coverage: ## remove Coverage file artifacts
+       rm -rf htmlconv/
+       rm -f .coverage
+
 lint: ## check style with flake8
 	flake8 {{ cookiecutter.app_name }} tests
 
@@ -38,9 +42,8 @@ test-all: ## run tests on every Python version with tox
 
 coverage: ## check code coverage quickly with the default Python
 	coverage run --source {{ cookiecutter.app_name }} runtests.py tests
-	coverage report -m
-	coverage html
-	open htmlcov/index.html
+	coverage report -m --omit="{{ cookiecutter.app_name }}/migrations/*"
+	coverage html --omit="{{ cookiecutter.app_name }}/migrations/*"
 
 docs: ## generate Sphinx HTML documentation, including API docs
 	rm -f docs/{{ cookiecutter.repo_name }}.rst
