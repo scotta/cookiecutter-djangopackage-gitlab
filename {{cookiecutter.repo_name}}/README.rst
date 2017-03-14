@@ -2,11 +2,23 @@
 {{ cookiecutter.project_name }}
 =============================
 
-.. image:: https://gitlab.com/hinterlandtoyota/{{ cookiecutter.repo_name }}/badges/master/build.svg
-    :target: https://gitlab.com/hinterlandtoyota/{{ cookiecutter.repo_name }}/commits/master
+{% if cookiecutter.gitlab_groupname %}
 
-.. image:: https://gitlab.com/hinterlandtoyota/{{ cookiecutter.repo_name }}/badges/master/coverage.svg
-    :target: https://gitlab.com/hinterlandtoyota/{{ cookiecutter.repo_name }}/commits/master
+.. image:: https://gitlab.com/{{ cookiecutter.gitlab_groupname}}/{{ cookiecutter.repo_name }}/badges/master/build.svg
+    :target: https://gitlab.com/{{ cookiecutter.gitlab_groupname}}/{{ cookiecutter.repo_name }}/commits/master
+
+.. image:: https://gitlab.com/{{ cookiecutter.gitlab_groupname}}/{{ cookiecutter.repo_name }}/badges/master/coverage.svg
+    :target: https://gitlab.com/{{ cookiecutter.gitlab_groupname}}/{{ cookiecutter.repo_name }}/commits/master
+
+{% else %}
+
+.. image:: https://gitlab.com/{{ cookiecutter.gitlab_username }}/badges/master/build.svg
+    :target: https://gitlab.com/{{ cookiecutter.gitlab_username }}/commits/master
+
+.. image:: https://gitlab.com/{{ cookiecutter.gitlab_username }}/badges/master/coverage.svg
+    :target: https://gitlab.com/{{ cookiecutter.gitlab_username}}/{{ cookiecutter.repo_name }}/commits/master
+
+{% endif %}
 
 {{ cookiecutter.project_short_description}}
 
