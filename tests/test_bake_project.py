@@ -127,6 +127,13 @@ def test_templates(cookies):
     pass
 
 
+def test_gitlab_ci(cookies):
+    with bake_in_temp_dir(cookies) as result:
+        gitlab_ci_file = result.project.join('.gitlab-ci.yml')
+        gitlab_ci_text = gitlab_ci_file.read()
+        assert 'tox' in gitlab_ci_text
+
+
 def test_tox(cookies):
     extra_context = {'app_name': 'cookie_lover'}
     with bake_in_temp_dir(cookies, extra_context=extra_context) as result:

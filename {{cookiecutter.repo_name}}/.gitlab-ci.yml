@@ -1,0 +1,15 @@
+
+all_tests_via_tox:
+  image: themattrix/tox
+  script:
+   - tox
+
+coverage:
+  image: python:3.5
+  script:
+   - apt-get -y update
+   - apt-get -y install python3-pip python3-dev python3-setuptools
+   - pip install --upgrade pip
+   - pip install -r requirements.txt -r requirements_test.txt
+   - make coverage
+
