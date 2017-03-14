@@ -23,14 +23,12 @@ Features
 --------
 
 * Sane setup.py for easy PyPI registration/distribution
-* Travis-CI configuration
-* Codecov configuration
 * Tox configuration
 * Sphinx Documentation
 * BSD licensed by default
 * Basic model generation (optional)
 * Structured to use GitLab
-** Uses GitLab CI
+* Uses GitLab CI
 
 Usage
 -----
