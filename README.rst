@@ -25,7 +25,6 @@ Features
 * Sane setup.py for easy PyPI registration/distribution
 * Tox configuration
 * Sphinx Documentation
-* BSD licensed by default
 * Basic model generation (optional)
 * Structured to use GitLab
 * Uses GitLab CI
@@ -35,7 +34,6 @@ Usage
 
 First, create your empty repo on GitLab (in our example below, we would call it ``blogging_for_humans``) and set up your virtual environment with your favorite method.
 
-**Note**: Your project will be created with a README.rst file containing a link to documentation on readthedocs.io.  You don't need to have these accounts set up before using Cookiecutter or cookiecutter-djangopackage.
 
 Now, get Cookiecutter_::
 
