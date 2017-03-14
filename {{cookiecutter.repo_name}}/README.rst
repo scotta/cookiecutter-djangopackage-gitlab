@@ -10,6 +10,9 @@
 
 {{ cookiecutter.project_short_description}}
 
+The GitLab CI/CD Pipelines need to be configured to extract the code coverage statistics.
+Please set the regular expression to :code:`TOTAL.*?(\d\d\%)`.
+
 Documentation
 -------------
 
