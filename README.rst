@@ -2,16 +2,16 @@
 Cookiecutter Django Package for GitLab
 ======================================
 
-.. image:: https://travis-ci.org/pydanny/cookiecutter-djangopackage-gitlab.svg?branch=master
-    :target: https://travis-ci.org/pydanny/cookiecutter-djangopackage-gitlab
+.. image:: https://travis-ci.org/scotta/cookiecutter-djangopackage-gitlab.svg?branch=master
+    :target: https://travis-ci.org/scotta/cookiecutter-djangopackage-gitlab
 
-A cookiecutter_ template for creating reusable Django packages (installable apps) quickly.
+A cookiecutter_ template for creating reusable Django packages (installable apps) quickly (using GitLab for hosting).
 
-This is a detached fork of `cookiecutter-djangopackage`_ (4cf583b) using GitLab
+This is a detached fork of `cookiecutter-djangopackage`_ (4cf583b)
 
 **Why?** Creating reusable Django packages has always been annoying. There are no defined/maintained
 best practices (especially for ``setup.py``), so you end up cutting and pasting hacky, poorly understood,
-often legacy code from one project to the other. This template, inspired by `cookiecutter-pypackage`_,
+often legacy code from one project to the other. This template, inspired by `cookiecutter-pypackage`_ and `cookiecutter-djangopackage`_,
 is designed to allow Django developers the ability to break free from cargo-cult configuration and follow
 a common pattern dictated by the experts and maintained here.
 
@@ -30,6 +30,7 @@ Features
 * BSD licensed by default
 * Basic model generation (optional)
 * Structured to use GitLab
+** Uses GitLab CI
 
 Usage
 -----
@@ -111,22 +112,13 @@ Code has been written, but does it actually work? Let's find out!
     (myenv) $ pip install -r requirements_test.txt
     (myenv) $ python runtests.py
 
-Setting up Travis
-~~~~~~~~~~~~~~~~~
+Setting up GitLab CI/CD
+~~~~~~~~~~~~~~~~~~~~~~~
 
-You will need to explicitly activate your repo in your `Travis CI profile`_.
-If the repo isn't showing up, run a manual synchronisation.
+The project is configured to trigger a full test run using `tox` on each commit.
 
-.. _Travis CI profile: https://travis-ci.org/profile/
-
-Integration with codecov.io
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Code coverage is integrated with `Codecov`_. Make sure you have an account
-and that you've granted access to your repo. In case of a private repo, you
-will need to generate a token and pass it when submitting coverage.
-
-.. _CodeCov: https://codecov.io/
+Test coverage requires customisation of the Regular Expression used to extract the percentage covered.
+Please add :code:`TOTAL.*?(\d\d\%)` to the coverage parsing section of your projects CI/CD settings.
 
 Register on PyPI
 ~~~~~~~~~~~~~~~~
