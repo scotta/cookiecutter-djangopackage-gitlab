@@ -24,13 +24,13 @@ If you are reporting a bug, please include:
 Fix Bugs
 ~~~~~~~~
 
-Look through the GitHub issues for bugs. Anything tagged with "bug"
+Look through the GitLab issues for bugs. Anything tagged with "bug"
 is open to whoever wants to implement it.
 
 Implement Features
 ~~~~~~~~~~~~~~~~~~
 
-Look through the GitHub issues for features. Anything tagged with "feature"
+Look through the GitLab issues for features. Anything tagged with "feature"
 is open to whoever wants to implement it.
 
 Write Documentation
@@ -57,10 +57,10 @@ Get Started!
 
 Ready to contribute? Here's how to set up `{{ cookiecutter.repo_name }}` for local development.
 
-1. Fork the `{{ cookiecutter.repo_name }}` repo on GitHub.
+1. Fork the `{{ cookiecutter.repo_name }}` repo on GitLab.
 2. Clone your fork locally::
 
-    $ git clone git@github.com:your_name_here/{{ cookiecutter.repo_name }}.git
+    $ git clone git@gitlab.com:your_name_here/{{ cookiecutter.repo_name }}.git
 
 3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
 
@@ -83,13 +83,13 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.repo_name }}` for loc
 
    To get flake8 and tox, just pip install them into your virtualenv. 
 
-6. Commit your changes and push your branch to GitHub::
+6. Commit your changes and push your branch to GitLab::
 
     $ git add .
     $ git commit -m "Your detailed description of your changes."
     $ git push origin name-of-your-bugfix-or-feature
 
-7. Submit a pull request through the GitHub website.
+7. Submit a pull request through the GitLab website.
 
 Pull Request Guidelines
 -----------------------
