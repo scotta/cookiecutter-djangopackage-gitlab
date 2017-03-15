@@ -13,7 +13,13 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
+{% if cookiecutter.gitlab_groupname %}
+Report bugs at https://gitlab.com/{{ cookiecutter.gitlab_groupname }}/{{ cookiecutter.repo_name }}/issues.
+{% else %}
 Report bugs at https://gitlab.com/{{ cookiecutter.gitlab_username }}/{{ cookiecutter.repo_name }}/issues.
+{% endif %}
+
+
 
 If you are reporting a bug, please include:
 
@@ -43,7 +49,11 @@ articles, and such.
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
+{% if cookiecutter.gitlab_groupname %}
+The best way to send feedback is to file an issue at https://gitlab.com/{{ cookiecutter.gitlab_groupname }}/{{ cookiecutter.repo_name }}/issues.
+{% else %}
 The best way to send feedback is to file an issue at https://gitlab.com/{{ cookiecutter.gitlab_username }}/{{ cookiecutter.repo_name }}/issues.
+{% endif %}
 
 If you are proposing a feature:
 

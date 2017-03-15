@@ -57,8 +57,9 @@ setup(
     description="""{{ cookiecutter.project_short_description }}""",
     long_description=readme + '\n\n' + history,
     author='{{ cookiecutter.full_name }}',
-    author_email='{{ cookiecutter.email }}',
-    url='https://gitlab.com/{{ cookiecutter.gitlab_username }}/{{ cookiecutter.repo_name }}',
+    author_email='{{ cookiecutter.email }}',{% if cookiecutter.gitlab_groupname %}
+    url='https://gitlab.com/{{ cookiecutter.gitlab_groupname }}/{{ cookiecutter.repo_name }}',{% else %}
+    url='https://gitlab.com/{{ cookiecutter.gitlab_username }}/{{ cookiecutter.repo_name }}',{% endif %}
     packages=[
         '{{ cookiecutter.app_name }}',
     ],
