@@ -99,20 +99,18 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.repo_name }}` for loc
     $ git commit -m "Your detailed description of your changes."
     $ git push origin name-of-your-bugfix-or-feature
 
-7. Submit a pull request through the GitLab website.
+7. Submit a merge request through the GitLab website.
 
-Pull Request Guidelines
+Merge Request Guidelines
 -----------------------
 
-Before you submit a pull request, check that it meets these guidelines:
+Before you submit a merge request, check that it meets these guidelines:
 
-1. The pull request should include tests.
-2. If the pull request adds functionality, the docs should be updated. Put
+1. The merge request should include tests.
+2. If the merge request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring, and add the
    feature to the list in README.rst.
-3. The pull request should work for Python 2.6, 2.7, and 3.3, and for PyPy. Check 
-   https://travis-ci.org/{{ cookiecutter.gitlab_username }}/{{ cookiecutter.repo_name }}/pull_requests
-   and make sure that the tests pass for all supported Python versions.
+3. The merge request should work for all environments defined in `tox.ini`.
 
 Tips
 ----
