@@ -28,8 +28,8 @@ clean-pyc: ## remove Python file artifacts
 	find . -name '*~' -exec rm -f {} +
 
 clean-coverage: ## remove Coverage file artifacts
-       rm -rf htmlconv/
-       rm -f .coverage
+	rm -rf htmlconv/
+	rm -f .coverage
 
 lint: ## check style with flake8
 	flake8 {{ cookiecutter.app_name }} tests
