@@ -16,20 +16,8 @@ except ImportError:
     'MIT': 'License :: OSI Approved :: MIT License',
 } %}
 
-
-def get_version(*file_paths):
-    """Retrieves the version from {{ cookiecutter.app_name }}/__init__.py"""
-    filename = os.path.join(os.path.dirname(__file__), *file_paths)
-    version_file = open(filename).read()
-    version_match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]",
-                              version_file, re.M)
-    if version_match:
-        return version_match.group(1)
-    raise RuntimeError('Unable to find version string.')
-
-
-version = get_version("{{ cookiecutter.app_name }}", "__init__.py")
-
+# Managed by bumpversion
+version = '0.1.0'
 
 if sys.argv[-1] == 'publish':
     try:
